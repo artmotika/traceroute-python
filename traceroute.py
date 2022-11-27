@@ -24,7 +24,7 @@ def take_arguments():
 def traceroute():
     args = take_arguments()
     hostname = args.get('hostname')
-    ttl = args.get('ttl')
+    ttl = int(args.get('ttl'))
 
     dest_ip = socket.gethostbyname(hostname)
     print('Tracing the route to {0}'.format(dest_ip))
